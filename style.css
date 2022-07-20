@@ -91,6 +91,7 @@ body{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 30px;
+  grid-column-gap: 20px;
   padding-top: 30px;
 }
 .single-blog{
@@ -99,7 +100,6 @@ body{
 }
 .blog-thumbnail img{
   width: 180px;
-  height: 120px;
 }
 .blog-info .blog-title {
   font-size: 20px;
@@ -176,3 +176,109 @@ body{
   line-height: 60px;
 }
 /* FOOTER END */
+
+
+/* MEDIA QUERY START */
+@media screen and (max-width: 959px) {
+  .container {
+    max-width: 960px;
+    margin: 0 20px;
+    margin-top: 30px;
+    padding: 0 30px;
+  }
+  .navbar{
+    max-width: 960px;
+    margin: 0 20px;
+  }
+  .course-title{
+    font-size: 18px;
+    padding: 8px 0;
+  }
+  .course-teacher{
+    font-size: 14px;
+  }
+  .extra-info {
+    font-size: 14px;
+  }
+  .extra-info .course-duration{
+    padding: 4px 8px;
+  }
+  .footer{
+    height: 60px;
+    background-color: #562EFF;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .courses{
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+}
+@media screen and (max-width:763px) {
+  .header{
+    height: 60px;
+    background-color: #562EFF;
+  }
+  .navbar{
+    height: 60px;
+  }
+  .navbar .logo-text{
+    font-size: 24px;
+  }
+  .navbar .logo,
+  .navbar .nav-links{
+    gap: 20px;
+  }
+  .navbar .logo img{
+    width: 32px;
+    height: 38px;
+  }
+  .navbar .profile-icon img{
+    width: 32px;
+  }
+  .top-players{
+    padding: 20px 0;
+  }
+  .players{
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+    padding-top: 20px;
+  }
+  .top-blogs{
+    padding: 20px 0;
+  }
+  .blogs{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .top-courses{
+    padding: 20px 0;
+  }
+  .courses{
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+}
+@media screen and (max-width:510px) {
+  .players .player img{
+    height: 36px;
+    width: 36px;
+  }
+  .player {
+    gap: 12px;
+  }
+  .player .player-name{
+    font-size: 16px;
+  }
+  .single-blog{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .blog-thumbnail img{
+    width: 100%;
+    height: auto;
+  }
+}
+/* MEDIA QUERY END */
